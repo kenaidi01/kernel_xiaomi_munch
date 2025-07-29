@@ -50,7 +50,6 @@ struct reclaim_state;
 struct capture_control;
 struct robust_list_head;
 struct sched_attr;
-struct sched_param;
 struct seq_file;
 struct sighand_struct;
 struct signal_struct;
@@ -109,6 +108,9 @@ struct task_group;
 
 #define task_is_stopped_or_traced(task)	((task->state & (__TASK_STOPPED | __TASK_TRACED)) != 0)
 
+struct sched_param {
+	int sched_priority;
+};
 
 enum task_boost_type {
 	TASK_BOOST_NONE = 0,
